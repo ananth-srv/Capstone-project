@@ -7,14 +7,6 @@ shinyUI(fluidPage(
   # Application title.
   titlePanel("Coursera Capstone Project : Next Word Predicton "),
   
-  # Sidebar with controls to select a dataset and specify the
-  # number of observations to view. The helpText function is
-  # also used to include clarifying text. Most notably, the
-  # inclusion of a submitButton defers the rendering of output
-  # until the user explicitly clicks the button (rather than
-  # doing it immediately when inputs change). This is useful if
-  # the computations required to render output are inordinately
-  # time-consuming.
   sidebarLayout(
     sidebarPanel(
       
@@ -33,10 +25,6 @@ shinyUI(fluidPage(
       # submitButton("Predict Next Word")
     ),
     
-    # Show a summary of the dataset and an HTML table with the
-    # requested number of observations. Note the use of the h4
-    # function to provide an additional header above each output
-    # section.
     mainPanel(
       textInput("Phrase","Start typing below :", "Here ", width = "400px"),
 
