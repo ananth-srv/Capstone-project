@@ -4,12 +4,6 @@ library(stringr)
 library(ANLP)
 library(quanteda)
 
-# # Load data  
-# load("ngr2.final.Rda")
-# load("ngr3.final1.Rda")
-# load("ngr4.final1.Rda")
-# # Define function
-
 print('loading models')
 gram2 <- read.csv("./data/gram2.csv",header = TRUE,colClasses = c("integer", "character", "character"))
 gram3 <- read.csv("./data/gram3.csv",header = TRUE,colClasses = c("integer", "character", "character"))
@@ -82,23 +76,8 @@ getNextWord = function(x = " ") {
   paste(c(output1, output2, output3), collapse = ', ')
 }
 
-# # List of all the models
-# 
-# 
-# model_4321_List = list(gram4,gram3,gram2,gram1)
-# model_1234_List = list(gram1,gram2,gram3,gram4)
-# model_321_List = list(gram3,gram2,gram1)
-# model_123_List = list(gram1,gram2,gram3)
-# model_21_List = list(gram2,gram1)
-# model_12_List = list(gram1,gram2)
-
-
 print('models loaded. go ahead with the prediction')
-# isReady <- T
 
-# Define server logic required to generate and plot a random distribution
-# Define server logic required to summarize and view the 
-# selected dataset
 shinyServer(function(input, output, session) {
   
   observe({
